@@ -5,9 +5,15 @@ const Title: React.FC<ITitle> = (props) => {
 
   return (
     <>
-      <h3 style={{ textAlign: "start", borderLeft: "1px solid black" }}>
+      <h4
+        style={{
+          textAlign: "start",
+          padding: ".5rem",
+          borderLeft: "2px solid black",
+        }}
+      >
         {text}
-      </h3>
+      </h4>
     </>
   );
 };

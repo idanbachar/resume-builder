@@ -1,5 +1,4 @@
 import { IExperience } from "../../Interfaces/IExperience";
-import { FormatDateString } from "../../Services/DateService";
 import styles from "./experience.module.css";
 
 const Experience: React.FC<IExperience> = (props) => {
@@ -9,10 +8,8 @@ const Experience: React.FC<IExperience> = (props) => {
     <div className={styles.mainContainer}>
       <div className={styles.companyContainer}>
         <h2 className={styles.company}>{company}</h2>
-        <span className={styles.company}>
-          {/* {endDate
-            ? `${FormatDateString(startDate)}-${FormatDateString(endDate)}`
-            : `${FormatDateString(startDate)} - Present`} */}
+        <span className={styles.date}>
+          {endDate ? `${startDate}-${endDate}` : `${startDate} - Present`}
         </span>
       </div>
       <span className={styles.role}>{role}</span>

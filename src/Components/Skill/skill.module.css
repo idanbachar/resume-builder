@@ -1,0 +1,10 @@
+.mainContainer {
+  width: 100%;
+  max-width: 70rem;
+  padding: 0.5rem;
+}
+
+.skill {
+  text-align: start;
+  font-size: 1.2rem;
+}

@@ -1,0 +1,49 @@
+{
+  "header": {
+    "fullname": {
+      "firstname": "Ezio",
+      "lastname": "Auditore da Firenze"
+    },
+    "role": "Assassin Extraordinaire",
+    "location": "Italy, Roma",
+    "phone": "",
+    "aboutMe": "Innovative assassin in the brotherhood, professional stealth taker, and very good with woman."
+  },
+  "experience": [
+    {
+      "company": "Liberation of Rome",
+      "role": "Master Strategist",
+      "duties": [
+        "Developed and executed a strategic plan to liberate Rome from Borgia control.",
+        "Coordinated with allies to weaken the Templar influence in the region."
+      ],
+      "startDate": "1500"
+    },
+    {
+      "company": "Assassin Brotherhood",
+      "role": "Assassin Mentor",
+      "duties": [
+        "Led the Brotherhood in the Italian Renaissance, mentoring and training new recruits.",
+        "Orchestrated successful missions against high-profile Templar targets."
+      ],
+      "startDate": "1476",
+      "endDate": "1499"
+    }
+  ],
+  "education": [
+    {
+      "company": "Self-Taught",
+      "city": "Assassin Training",
+      "description": "Learned the ways of the Assassin through self-discipline, observation, and guidance from skilled mentors.",
+      "startDate": "1469",
+      "endDate": "1476"
+    }
+  ],
+  "skills": [
+    "Stealth Mastery",
+    "Combat Expertise",
+    "Free-Running Acrobatics",
+    "Eagle Vision",
+    "Leadership"
+  ]
+}
