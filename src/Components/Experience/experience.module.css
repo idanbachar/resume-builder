@@ -1,0 +1,23 @@
+.mainContainer {
+    width: 100%;
+    max-width: 70rem;
+    border: 2px dashed black;
+    padding: .5rem;
+  }
+  
+  .basicHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  
+  .fullname {
+    margin-block-start: 0;
+    margin-block-end: 0;
+    font-size: 2rem;
+  }
+  
+  .role {
+    font-size: 1.2rem;
+  }
+  
