@@ -1,23 +1,24 @@
 import Experience from "../Experience/Experience";
 import Header from "../Headers/Header/Header";
 import Title from "../Title/Title";
-import demoResume from "../../Data/demoResume.json";
 import Education from "../Education/Education";
 import Skill from "../Skill/Skills";
 import styles from "./resume.module.css";
+import { IResume } from "../../Interfaces/IResume";
 
-const Resume: React.FC = () => {
+const Resume: React.FC<IResume> = (props) => {
+  const { header, experience, education, skills } = props;
   return (
     <div className={styles.container}>
       <Header
-        fullname={demoResume.header.fullname}
-        role={demoResume.header.role}
-        location={demoResume.header.location}
-        phone={demoResume.header.location}
-        aboutMe={demoResume.header.aboutMe}
+        fullname={header.fullname}
+        role={header.role}
+        location={header.location}
+        phone={header.location}
+        aboutMe={header.aboutMe}
       />
       <Title text="Experience" />
-      {demoResume.experience.map((experience, index) => (
+      {experience.map((experience, index) => (
         <Experience
           key={index}
           duties={experience.duties}
@@ -28,7 +29,7 @@ const Resume: React.FC = () => {
         />
       ))}
       <Title text="Education" />
-      {demoResume.education.map((education, index) => (
+      {education.map((education, index) => (
         <Education
           key={index}
           company={education.company}
@@ -38,7 +39,7 @@ const Resume: React.FC = () => {
         />
       ))}
       <Title text="Skills" />
-      {demoResume.skills.map((skill, index) => (
+      {skills.map((skill, index) => (
         <Skill skill={skill} key={index} />
       ))}
     </div>

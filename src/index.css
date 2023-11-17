@@ -11,3 +11,21 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.edit {
+  cursor: pointer;
+}
+
+.inputEditAvailable {
+  outline: none;
+  border: 0;
+  resize: none;
+  width: 100%;
+}
+
+input[type="text"]:disabled {
+  background: white;
+}
+textarea:disabled {
+  background: white;
+}

@@ -1,7 +1,6 @@
 .mainContainer {
   width: 100%;
   max-width: 70rem;
-  /* border: 2px dashed black; */
   padding: 0.5rem;
   display: flex;
   flex-direction: column;
@@ -18,6 +17,16 @@
   margin-block-start: 0;
   margin-block-end: 0;
   font-size: 2rem;
+}
+
+.fullnameContainer,
+.roleContainer,
+.aboutMeContainer {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .role {
