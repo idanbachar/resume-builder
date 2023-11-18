@@ -1,7 +1,5 @@
-import { useState } from "react";
 import { IExperience } from "../../Interfaces/IExperience";
 import styles from "./experience.module.css";
-import { MdEdit } from "react-icons/md";
 
 const Experience: React.FC<IExperience & { isEdit: boolean }> = (props) => {
   const { company, role, duties, startDate, endDate, isEdit } = props;
@@ -19,15 +17,7 @@ const Experience: React.FC<IExperience & { isEdit: boolean }> = (props) => {
           defaultValue={company}
           disabled={!isEdit}
           placeholder={"Company name"}
-        />
-        <input
-          type={"text"}
-          className={`${styles.date} inputEditAvailable`}
-          defaultValue={
-            endDate ? `${startDate}-${endDate}` : `${startDate} - Present`
-          }
-          disabled={!isEdit}
-          placeholder={"Start date - End date"}
+          maxLength={70}
         />
       </div>
       <input
@@ -36,22 +26,32 @@ const Experience: React.FC<IExperience & { isEdit: boolean }> = (props) => {
         defaultValue={role}
         disabled={!isEdit}
         placeholder={"Role"}
+        maxLength={40}
       />
-      <div>
-        <ul className={styles.dutiesContainer}>
-          {duties.map((duty, index) => (
-            <li key={index}>
-              <input
-                type={"text"}
-                className={`${styles.duty} inputEditAvailable`}
-                defaultValue={duty}
-                disabled={!isEdit}
-                placeholder={`Duty ${index + 1}`}
-              />
-            </li>
-          ))}
-        </ul>
-      </div>
+      <ul className={styles.dutiesContainer}>
+        {duties.map((duty, index) => (
+          <li key={index}>
+            <input
+              type={"text"}
+              className={`${styles.duty} inputEditAvailable`}
+              defaultValue={duty}
+              disabled={!isEdit}
+              placeholder={`Duty ${index + 1}`}
+              maxLength={100}
+            />
+          </li>
+        ))}
+      </ul>
+      <input
+        type={"text"}
+        className={`${styles.date} inputEditAvailable`}
+        defaultValue={
+          endDate ? `${startDate}-${endDate}` : `${startDate} - Present`
+        }
+        disabled={!isEdit}
+        placeholder={"Start date - End date"}
+        maxLength={35}
+      />
     </div>
   );
 };

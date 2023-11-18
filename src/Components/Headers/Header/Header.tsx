@@ -14,6 +14,7 @@ const Header: React.FC<IHeader> = (props) => {
             defaultValue={`${fullname.firstname} ${fullname.lastname}`}
             className={styles.fullname}
             placeholder={"Fullname"}
+            maxLength={40}
           />
         </div>
         <div className={styles.roleContainer}>
@@ -22,6 +23,7 @@ const Header: React.FC<IHeader> = (props) => {
             defaultValue={role}
             className={styles.role}
             placeholder={"Role"}
+            maxLength={40}
           />
         </div>
       </div>
@@ -31,6 +33,7 @@ const Header: React.FC<IHeader> = (props) => {
           defaultValue={aboutMe}
           className={styles.aboutMe}
           placeholder={"About me"}
+          maxLength={180}
         />
       </div>
     </div>

@@ -1,6 +1,4 @@
-import { MdEdit } from "react-icons/md";
 import styles from "./skill.module.css";
-import { useState } from "react";
 import { ISkill } from "../../Interfaces/ISkills";
 
 const Skill: React.FC<ISkill> = (props) => {
@@ -13,6 +11,7 @@ const Skill: React.FC<ISkill> = (props) => {
         className={`${styles.skill} inputEditAvailable`}
         defaultValue={skill}
         disabled={!isEdit}
+        maxLength={50}
       />
     </li>
   );

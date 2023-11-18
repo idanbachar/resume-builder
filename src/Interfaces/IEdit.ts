@@ -3,4 +3,5 @@ export interface IEditableInput {
   placeholder?: string;
   defaultValue: string;
   className?: string;
+  maxLength?: number;
 }
