@@ -5,3 +5,7 @@ export interface IExperience {
   startDate: string;
   endDate?: string;
 }
+
+export interface IExperiences {
+  experience: IExperience[];
+}

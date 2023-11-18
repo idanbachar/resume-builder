@@ -5,3 +5,7 @@ export interface IEducation {
   description: string;
   endDate?: string;
 }
+
+export interface IEducations {
+  education: IEducation[];
+}
