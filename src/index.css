@@ -52,3 +52,14 @@ h6 {
   margin-block-end: 0;
   margin-block-start: 0;
 }
+
+.saveAsPdfButton {
+  position: fixed;
+  left: 0;
+  top: 0;
+  cursor: pointer;
+}
+
+.saveAsPdfButton :hover {
+  color: red;
+}

@@ -1,13 +1,15 @@
 import Resume from "./Components/Resume/Resume";
 import demoResume from "./Data/demoResume.json";
+import DownloadPDFButton from "./Components/DownloadPDFButton/DownloadPDFButton";
 import "./App.css";
 
-const App = () => {
+const App: React.FC = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <Resume {...demoResume} />
-      </header>
+      <DownloadPDFButton
+        content={<Resume {...demoResume} />}
+        fileName={`Resume-${new Date().toISOString().split("T")[0]}`}
+      />
     </div>
   );
 };

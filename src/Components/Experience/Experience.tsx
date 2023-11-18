@@ -1,8 +1,8 @@
 import { IExperience } from "../../Interfaces/IExperience";
 import { useState } from "react";
-import styles from "./experience.module.css";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import { CreateNewDuty } from "../../Services/Helpers";
+import styles from "./experience.module.css";
 
 const Experience: React.FC<IExperience & { isEdit: boolean }> = (props) => {
   const {

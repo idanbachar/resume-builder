@@ -8,7 +8,7 @@ import styles from "./resume.module.css";
 const Resume: React.FC<IResume> = (props) => {
   const { header, experience, education, skills } = props;
   return (
-    <div className={styles.container}>
+    <div className={styles.container} id="resume-container">
       <Header {...header} />
       <Experiences experience={experience} />
       <Educations education={education} />
