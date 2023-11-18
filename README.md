@@ -11,7 +11,7 @@ A web application for creating and managing professional resumes, built using Re
 - [Prerequisites](#prerequisites)
 - [Getting Started](#getting-started)
 - [Usage](#usage)
-- [Usage](#Default-Demo-JSON-File)
+- [Default Demo JSON File](#Default-Demo-JSON-File)
 - [Dependencies](#dependencies)
 
 ## Introduction
