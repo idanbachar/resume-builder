@@ -4,8 +4,8 @@ import Title from "../Title/Title";
 import Education from "./Education";
 import { useState } from "react";
 import { FaMinus, FaPlus } from "react-icons/fa";
-import styles from "./education.module.css";
 import { CreateNewEducation } from "../../Services/Helpers";
+import styles from "./education.module.css";
 
 const Educations: React.FC<IEducations> = (props) => {
   const { education } = props;
@@ -22,6 +22,7 @@ const Educations: React.FC<IEducations> = (props) => {
           color={isEdit ? "red" : "black"}
         />
       </div>
+      <hr style={{ width: "100%" }} />
       {educations.map((education, index) => (
         <Education key={index} {...education} isEdit={isEdit} />
       ))}

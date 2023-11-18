@@ -24,6 +24,7 @@ const Experiences: React.FC<IExperiences> = (props) => {
           color={isEdit ? "red" : "black"}
         />
       </div>
+      <hr style={{ width: "100%" }} />
       {experiences.map((experience, index) => (
         <Experience key={index} {...experience} isEdit={isEdit} />
       ))}

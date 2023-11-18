@@ -20,3 +20,7 @@ export const CreateNewEducation = (): IEducation => {
     description: "Description",
   };
 };
+
+export const CreateNewSkill = (): string => {
+  return "Skill";
+};
