@@ -14,6 +14,7 @@
   margin-block-start: 0;
   margin-block-end: 0;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 
 .date {
@@ -31,5 +32,9 @@
   display: flex;
   flex-direction: column;
   text-align: start;
+  font-size: 1.2rem;
+}
+
+.duty {
   font-size: 1.2rem;
 }

@@ -2,9 +2,10 @@ import Experience from "../Experience/Experience";
 import Header from "../Headers/Header/Header";
 import Title from "../Title/Title";
 import Education from "../Education/Education";
-import Skill from "../Skill/Skills";
+import Skill from "../Skill/Skill";
 import styles from "./resume.module.css";
 import { IResume } from "../../Interfaces/IResume";
+import Skills from "../Skill/Skills";
 
 const Resume: React.FC<IResume> = (props) => {
   const { header, experience, education, skills } = props;
@@ -39,9 +40,7 @@ const Resume: React.FC<IResume> = (props) => {
         />
       ))}
       <Title text="Skills" />
-      {skills.map((skill, index) => (
-        <Skill skill={skill} key={index} />
-      ))}
+      <Skills skills={skills} />
     </div>
   );
 };
