@@ -14,11 +14,8 @@ const Resume: React.FC<IResume> = (props) => {
   return (
     <div className={styles.container}>
       <Header {...header} />
-      <Title text="Experience" />
       <Experiences experience={experience} />
-      <Title text="Education" />
       <Educations education={education} />
-      <Title text="Skills" />
       <Skills skills={skills} />
     </div>
   );

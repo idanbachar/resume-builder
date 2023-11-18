@@ -3,6 +3,7 @@ import { ISkills } from "../../Interfaces/ISkills";
 import styles from "./skill.module.css";
 import { useState } from "react";
 import Skill from "./Skill";
+import Title from "../Title/Title";
 
 const Skills: React.FC<ISkills> = (props) => {
   const { skills } = props;
@@ -15,6 +16,7 @@ const Skills: React.FC<ISkills> = (props) => {
         border: isEdit ? "2px dashed black" : "none",
       }}
     >
+      <Title text="Skills" />
       <MdEdit
         className={"edit"}
         onClick={() => setIsEdit(!isEdit)}

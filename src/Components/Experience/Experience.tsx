@@ -3,10 +3,8 @@ import { IExperience } from "../../Interfaces/IExperience";
 import styles from "./experience.module.css";
 import { MdEdit } from "react-icons/md";
 
-const Experience: React.FC<IExperience> = (props) => {
-  const { company, role, duties, startDate, endDate } = props;
-  const [isEdit, setIsEdit] = useState(false);
-
+const Experience: React.FC<IExperience & { isEdit: boolean }> = (props) => {
+  const { company, role, duties, startDate, endDate, isEdit } = props;
   return (
     <div
       className={styles.mainContainer}
@@ -14,13 +12,6 @@ const Experience: React.FC<IExperience> = (props) => {
         border: isEdit ? "2px dashed black" : "none",
       }}
     >
-      <div style={{ display: "flex", marginBottom: "1rem" }}>
-        <MdEdit
-          className={"edit"}
-          onClick={() => setIsEdit(!isEdit)}
-          color={isEdit ? "red" : "black"}
-        />
-      </div>
       <div className={styles.companyContainer}>
         <input
           type={"text"}

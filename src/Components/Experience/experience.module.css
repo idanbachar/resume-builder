@@ -5,6 +5,12 @@
   padding: 0.5rem;
 }
 
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .companyContainer {
   display: flex;
   justify-content: space-between;
@@ -37,4 +43,9 @@
 
 .duty {
   font-size: 1.2rem;
+}
+
+.plusMinusButtons {
+  display: flex;
+  gap: 1rem;
 }

@@ -1,63 +1,33 @@
-import { useState } from "react";
 import { IHeader } from "../../../Interfaces/IHeader";
 import styles from "./headers.module.css";
-import { MdEdit } from "react-icons/md";
+import EditableInput from "../../EditableInput/EditableInput";
 
 const Header: React.FC<IHeader> = (props) => {
-  const { fullname, image, location, phone, role, aboutMe } = props;
-  const [isEditFullname, setIsEditFullname] = useState(false);
-  const [isEditRole, setIsEditRole] = useState(false);
-  const [isEditAboutMe, setIsEditAboutMe] = useState(false);
+  const { fullname, role, aboutMe } = props;
 
   return (
     <div className={styles.mainContainer}>
       <div className={styles.basicHeader}>
         <div className={styles.fullnameContainer}>
-          <input
+          <EditableInput
             type={"text"}
-            className={`${styles.fullname} inputEditAvailable`}
             defaultValue={`${fullname.firstname} ${fullname.lastname}`}
-            disabled={!isEditFullname}
-            style={{
-              border: isEditFullname ? "2px dashed black" : "none",
-            }}
-          />
-          <MdEdit
-            className={"edit"}
-            onClick={() => setIsEditFullname(!isEditFullname)}
-            color={isEditFullname ? "red" : "black"}
+            className={styles.fullname}
           />
         </div>
         <div className={styles.roleContainer}>
-          <input
+          <EditableInput
             type={"text"}
-            className={`${styles.role} inputEditAvailable`}
-            defaultValue={`${role}`}
-            disabled={!isEditRole}
-            style={{
-              border: isEditRole ? "2px dashed black" : "none",
-            }}
-          />
-          <MdEdit
-            className={"edit"}
-            onClick={() => setIsEditRole(!isEditRole)}
-            color={isEditRole ? "red" : "black"}
+            defaultValue={role}
+            className={styles.role}
           />
         </div>
       </div>
       <div className={styles.aboutMeContainer}>
-        <textarea
+        <EditableInput
+          type="textarea"
           defaultValue={aboutMe}
-          className={`${styles.aboutMe} inputEditAvailable`}
-          disabled={!isEditAboutMe}
-          style={{
-            border: isEditAboutMe ? "2px dashed black" : "none",
-          }}
-        />
-        <MdEdit
-          className={"edit"}
-          onClick={() => setIsEditAboutMe(!isEditAboutMe)}
-          color={isEditAboutMe ? "red" : "black"}
+          className={styles.aboutMe}
         />
       </div>
     </div>
