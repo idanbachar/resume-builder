@@ -18,6 +18,7 @@ const Experience: React.FC<IExperience & { isEdit: boolean }> = (props) => {
           className={`${styles.company} inputEditAvailable`}
           defaultValue={company}
           disabled={!isEdit}
+          placeholder={"Company name"}
         />
         <input
           type={"text"}
@@ -26,6 +27,7 @@ const Experience: React.FC<IExperience & { isEdit: boolean }> = (props) => {
             endDate ? `${startDate}-${endDate}` : `${startDate} - Present`
           }
           disabled={!isEdit}
+          placeholder={"Start date - End date"}
         />
       </div>
       <input
@@ -33,6 +35,7 @@ const Experience: React.FC<IExperience & { isEdit: boolean }> = (props) => {
         className={`${styles.role} inputEditAvailable`}
         defaultValue={role}
         disabled={!isEdit}
+        placeholder={"Role"}
       />
       <div>
         <ul className={styles.dutiesContainer}>
@@ -43,6 +46,7 @@ const Experience: React.FC<IExperience & { isEdit: boolean }> = (props) => {
                 className={`${styles.duty} inputEditAvailable`}
                 defaultValue={duty}
                 disabled={!isEdit}
+                placeholder={`Duty ${index + 1}`}
               />
             </li>
           ))}

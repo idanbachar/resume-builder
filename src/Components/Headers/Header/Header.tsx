@@ -13,6 +13,7 @@ const Header: React.FC<IHeader> = (props) => {
             type={"text"}
             defaultValue={`${fullname.firstname} ${fullname.lastname}`}
             className={styles.fullname}
+            placeholder={"Fullname"}
           />
         </div>
         <div className={styles.roleContainer}>
@@ -20,6 +21,7 @@ const Header: React.FC<IHeader> = (props) => {
             type={"text"}
             defaultValue={role}
             className={styles.role}
+            placeholder={"Role"}
           />
         </div>
       </div>
@@ -28,6 +30,7 @@ const Header: React.FC<IHeader> = (props) => {
           type="textarea"
           defaultValue={aboutMe}
           className={styles.aboutMe}
+          placeholder={"About me"}
         />
       </div>
     </div>

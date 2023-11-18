@@ -1,15 +1,53 @@
-import { IEducations } from "../../Interfaces/IEducation";
+import { MdEdit } from "react-icons/md";
+import { IEducation, IEducations } from "../../Interfaces/IEducation";
 import Title from "../Title/Title";
 import Education from "./Education";
+import { useState } from "react";
+import { FaMinus, FaPlus } from "react-icons/fa";
+import styles from "./education.module.css";
+import { CreateNewEducation } from "../../Services/Helpers";
 
 const Educations: React.FC<IEducations> = (props) => {
   const { education } = props;
+  const [isEdit, setIsEdit] = useState(false);
+  const [educations, setEducations] = useState<IEducation[]>([...education]);
+
   return (
     <>
-      <Title text="Education" />
-      {education.map((education, index) => (
-        <Education key={index} {...education} />
+      <div className={styles.titleContainer}>
+        <Title text="Education" isEdit={isEdit} />
+        <MdEdit
+          className={"edit"}
+          onClick={() => setIsEdit(!isEdit)}
+          color={isEdit ? "red" : "black"}
+        />
+      </div>
+      {educations.map((education, index) => (
+        <Education key={index} {...education} isEdit={isEdit} />
       ))}
+      {isEdit && (
+        <div className={styles.plusMinusButtons}>
+          <FaPlus
+            className={"plusMinusButton"}
+            style={{ color: "green" }}
+            onClick={() => {
+              const newEducation = { ...CreateNewEducation() };
+              setEducations([...educations, newEducation]);
+            }}
+          />
+          {educations.length > 0 && (
+            <FaMinus
+              className={"plusMinusButton"}
+              style={{ color: "red" }}
+              onClick={() => {
+                const allEducations = [...educations];
+                allEducations.pop();
+                setEducations([...allEducations]);
+              }}
+            />
+          )}
+        </div>
+      )}
     </>
   );
 };

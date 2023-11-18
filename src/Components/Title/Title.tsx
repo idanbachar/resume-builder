@@ -1,7 +1,7 @@
 import { ITitle } from "../../Interfaces/ITitle";
 
 const Title: React.FC<ITitle> = (props) => {
-  const { text } = props;
+  const { text, isEdit = false } = props;
 
   return (
     <>
@@ -10,6 +10,7 @@ const Title: React.FC<ITitle> = (props) => {
           textAlign: "start",
           padding: ".5rem",
           borderLeft: "2px solid black",
+          color: isEdit ? "red" : "black",
         }}
       >
         {text}

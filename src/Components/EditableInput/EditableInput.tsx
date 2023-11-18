@@ -3,7 +3,7 @@ import { IEditableInput } from "../../Interfaces/IEdit";
 import { useState } from "react";
 
 const EditableInput: React.FC<IEditableInput> = (props) => {
-  const { className, defaultValue, type } = props;
+  const { className, defaultValue, type, placeholder } = props;
   const [isEdit, setIsEdit] = useState(false);
 
   const inputProps = {
@@ -12,6 +12,7 @@ const EditableInput: React.FC<IEditableInput> = (props) => {
     defaultValue,
     disabled: !isEdit,
     style: { border: isEdit ? "2px dashed black" : "none" },
+    placeholder,
   };
 
   return (

@@ -17,7 +17,7 @@ const Experiences: React.FC<IExperiences> = (props) => {
   return (
     <>
       <div className={styles.titleContainer}>
-        <Title text="Experience" />
+        <Title text="Experience" isEdit={isEdit} />
         <MdEdit
           className={"edit"}
           onClick={() => setIsEdit(!isEdit)}
@@ -31,6 +31,7 @@ const Experiences: React.FC<IExperiences> = (props) => {
         <div className={styles.plusMinusButtons}>
           <FaPlus
             className={"plusMinusButton"}
+            style={{ color: "green" }}
             onClick={() => {
               const newExperience = { ...CreateNewExperience() };
               setExperiences([...experiences, newExperience]);
@@ -39,6 +40,7 @@ const Experiences: React.FC<IExperiences> = (props) => {
           {experiences.length > 0 && (
             <FaMinus
               className={"plusMinusButton"}
+              style={{ color: "red" }}
               onClick={() => {
                 const allExperiences = [...experiences];
                 allExperiences.pop();

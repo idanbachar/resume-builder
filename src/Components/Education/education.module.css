@@ -14,6 +14,12 @@
   justify-content: space-between;
 }
 
+.titleContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .company {
   margin-block-start: 0;
   margin-block-end: 0;
@@ -35,4 +41,9 @@
   font-size: 1.2rem;
   display: flex;
   justify-self: start;
+}
+
+.plusMinusButtons {
+  display: flex;
+  gap: 1rem;
 }
