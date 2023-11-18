@@ -1,8 +1,21 @@
 import { IExperience } from "../../Interfaces/IExperience";
+import { useState } from "react";
 import styles from "./experience.module.css";
+import { FaMinus, FaPlus } from "react-icons/fa";
+import { CreateNewDuty } from "../../Services/Helpers";
 
 const Experience: React.FC<IExperience & { isEdit: boolean }> = (props) => {
-  const { company, role, duties, startDate, endDate, isEdit } = props;
+  const {
+    company,
+    role,
+    duties: dutiesList,
+    startDate,
+    endDate,
+    isEdit,
+  } = props;
+
+  const [duties, setDuties] = useState<string[]>([...dutiesList]);
+
   return (
     <div
       className={styles.mainContainer}
@@ -41,6 +54,31 @@ const Experience: React.FC<IExperience & { isEdit: boolean }> = (props) => {
             />
           </li>
         ))}
+        {isEdit && (
+          <li>
+            <div className={styles.plusMinusButtons}>
+              <FaPlus
+                className={"plusMinusButton"}
+                style={{ color: "green" }}
+                onClick={() => {
+                  const newDuty = CreateNewDuty();
+                  setDuties([...duties, newDuty]);
+                }}
+              />
+              {duties.length > 0 && (
+                <FaMinus
+                  className={"plusMinusButton"}
+                  style={{ color: "red" }}
+                  onClick={() => {
+                    const allDuties = [...duties];
+                    allDuties.pop();
+                    setDuties([...allDuties]);
+                  }}
+                />
+              )}
+            </div>
+          </li>
+        )}
       </ul>
       <input
         type={"text"}

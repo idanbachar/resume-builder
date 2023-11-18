@@ -24,3 +24,7 @@ export const CreateNewEducation = (): IEducation => {
 export const CreateNewSkill = (): string => {
   return "Skill";
 };
+
+export const CreateNewDuty = (): string => {
+  return "New duty";
+};

@@ -28,6 +28,7 @@ input[type="text"]:disabled {
 }
 textarea:disabled {
   background: white;
+  overflow: hidden;
 }
 
 .plusMinusButton {
